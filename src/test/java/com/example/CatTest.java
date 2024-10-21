@@ -21,12 +21,12 @@ public class CatTest {
     }
 
     @Test
-    public void getSound_shouldReturnMeow() {
+    public void getSoundshouldReturnMeow() {
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
-    public void getFood_shouldReturnPredatorFood() throws Exception {
+    public void getFoodShouldReturnPredatorFood() throws Exception {
         when(felineMock.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));  // Мокируем поведение метода eatMeat
         List<String> food = cat.getFood();
         assertEquals(List.of("Животные", "Птицы", "Рыба"), food);
